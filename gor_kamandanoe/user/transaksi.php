@@ -155,5 +155,6 @@ WHERE nama_user='$nama'");
 // halo semua prabiwo
 // ayok joging
 //ASU
+// oyok kantin lahhh, udah pengen keluar ini
 </body>
 </html>
