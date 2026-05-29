@@ -147,8 +147,11 @@ WHERE nama_user='$nama'");
     <?php } ?>
 
 </div>
-<h2> mas bahlil ganteng</h2>
+<h2>git mas bahlil ganteng</h2>
 <h3> ayokk belajar git hub</h3>
+<h4> jangan lupa like dan subscribe</h4>
+<h5> terimakasih sudah mampir ke channel saya </h5>
+// anak anjing gogok ayok lari-lari
 
 </body>
 </html>
