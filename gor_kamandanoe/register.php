@@ -13,6 +13,8 @@ if (isset($_POST['register'])) {
         "SELECT username from user"
     );
 
+    echo "titit";
+
     $cek = mysqli_num_rows($data);
 
     if ($cek > 0) {
