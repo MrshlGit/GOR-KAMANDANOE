@@ -152,6 +152,8 @@ WHERE nama_user='$nama'");
 <h4> jangan lupa like dan subscribe</h4>
 <h5> terimakasih sudah mampir ke channel saya </h5>
 // anak anjing gogok ayok lari-lari
-
+// halo semua prabiwo
+// ayok joging
+//ASU
 </body>
 </html>
