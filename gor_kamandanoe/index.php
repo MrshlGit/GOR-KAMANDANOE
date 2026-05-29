@@ -59,5 +59,10 @@
 
 </div>
 
+<div class="footer">
+    <p>&copy; Marshel GANTENG BANGET </p>
+</div>
+
 </body>
 </html>
+
