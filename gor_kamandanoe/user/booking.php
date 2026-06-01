@@ -94,12 +94,16 @@ VALUES
         class="input"
         required>
 
-        <select name="jam" class="input">
-
+        <select id="jamMulai" name="jam" class="input">
             <option value="8">08:00</option>
             <option value="9">09:00</option>
             <option value="10">10:00</option>
+        </select>
 
+        <select id="jamSelesai" class="input">
+            <option value="9">09:00</option>
+            <option value="10">10:00</option>
+            <option value="11">11:00</option>
         </select>
 
         <!-- <input type="time"
@@ -109,11 +113,12 @@ VALUES
         required> -->
 
         <input type="number"
-        name="durasi"
-        min="1"
-        class="input"
-        placeholder="Durasi / Jam"
-        required>
+            id="durasi"
+            name="durasi"
+            min="1"
+            class="input"
+            placeholder="Durasi / Jam"
+            required>
 
         <button type="submit"
         name="booking"
@@ -122,8 +127,26 @@ VALUES
         </button>
 
     </form>
-
 </div>
+
+        <script>
+            const jamMulai = document.getElementById('jamMulai');
+            const jamSelesai = document.getElementById('jamSelesai');
+            const durasi = document.getElementById('durasi');
+
+            function hitungDurasi() {
+                const mulai = parseInt(jamMulai.value);
+                const selesai = parseInt(jamSelesai.value);
+                if (selesai > mulai) {
+                durasi.value = selesai - mulai;
+                } else {
+                durasi.value = 1; // default minimal
+                }
+            }
+
+            jamMulai.addEventListener('change', hitungDurasi);
+            jamSelesai.addEventListener('change', hitungDurasi);
+        </script>
 
 </body>
 </html>
