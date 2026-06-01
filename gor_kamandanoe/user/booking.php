@@ -9,17 +9,24 @@ if (isset($_POST['booking'])) {
 
     $lapangan = $_POST['lapangan'];
     $tanggal = $_POST['tanggal'];
-    $jam = (int) $_POST['jam'];
-    $durasi = (int) $_POST['durasi'];
+    $jam = (int)$_POST['jam'];
+    $durasi = (int)$_POST['durasi'];
+
+    // Validasi durasi
     if ($durasi < 1) {
-        echo "<script>alert('Durasi tidak boleh kurang dari 1 jam');history.back();</script>";
+        echo "
+        <script>
+            alert('Durasi tidak boleh kurang dari 1 jam');
+            history.back();
+        </script>
+        ";
         exit;
     }
 
     // Hitung jam selesai
     $jam2 = $jam + $durasi;
 
-    // Validasi jam selesai (misal maksimal jam 22:00)
+    // Validasi batas operasional
     if ($jam2 > 22) {
         echo "
         <script>
@@ -30,33 +37,47 @@ if (isset($_POST['booking'])) {
         exit;
     }
 
-    // Format jam tampil
-    $jamtotal = $jam . ":00 - " . $jam2 . ":00";
+    // ==========================
+    // CEK TABRAKAN JADWAL
+    // ==========================
 
-    $data = mysqli_query(
+    $cekBooking = mysqli_query(
         $conn,
-        "SELECT tanggal, jam from booking"
+        "SELECT jam
+         FROM booking
+         WHERE tanggal='$tanggal'
+         AND lapangan='$lapangan'"
     );
 
+    while ($row = mysqli_fetch_assoc($cekBooking)) {
 
-    $cek = mysqli_num_rows($data);
+        // Contoh data:
+        // 08:00 - 10:00
 
-    if ($cek > 0) {
-        while ($row = mysqli_fetch_array($data)) {
-            if ($tanggal == $row['tanggal'] && $jamtotal = $row['jam'] ) {
-                echo "
-                    <script>
-                        alert('Lapangan sudah di booking');
-                        window.location='register.php';
-                    </script>
-                    ";
-            }
+        preg_match('/(\d+):00\s-\s(\d+):00/', $row['jam'], $match);
+
+        $jam_mulai_lama   = (int)$match[1];
+        $jam_selesai_lama = (int)$match[2];
+
+        // Cek apakah ada tabrakan waktu
+        if (
+            $jam < $jam_selesai_lama &&
+            $jam2 > $jam_mulai_lama
+        ) {
+            echo "
+            <script>
+                alert('Lapangan sudah dibooking pada jam tersebut');
+                history.back();
+            </script>
+            ";
+            exit;
         }
     }
 
-    
+    // Format jam untuk disimpan
+    $jamtotal = sprintf("%02d:00 - %02d:00", $jam, $jam2);
 
-    // Harga lapangan per jam
+    // Harga lapangan
     if ($lapangan == "Lapangan A") {
         $harga = 50000;
     } elseif ($lapangan == "Lapangan B") {
@@ -65,34 +86,34 @@ if (isset($_POST['booking'])) {
         $harga = 90000;
     }
 
-    // Hitung total bayar
+    // Total pembayaran
     $total = $harga * $durasi;
 
+    // Simpan booking
     mysqli_query(
         $conn,
         "INSERT INTO booking
-(
-    nama_user,
-    lapangan,
-    tanggal,
-    jam,
-    status,
-    harga,
-    total_bayar,
-    metode_pembayaran
-)
-
-VALUES
-(
-    '$nama',
-    '$lapangan',
-    '$tanggal',
-    '$jamtotal',
-    'Menunggu',
-    '$harga',
-    '$total',
-    '-'
-)"
+        (
+            nama_user,
+            lapangan,
+            tanggal,
+            jam,
+            status,
+            harga,
+            total_bayar,
+            metode_pembayaran
+        )
+        VALUES
+        (
+            '$nama',
+            '$lapangan',
+            '$tanggal',
+            '$jamtotal',
+            'Menunggu',
+            '$harga',
+            '$total',
+            '-'
+        )"
     );
 
     echo "
@@ -109,11 +130,8 @@ VALUES
 <html>
 
 <head>
-
     <title>Booking Lapangan</title>
-
     <link rel='stylesheet' href='../css/style.css'>
-
 </head>
 
 <body>
@@ -132,29 +150,45 @@ VALUES
 
             </select>
 
-            <input type="date" name="tanggal" class="input" required>
+            <input type="date"
+                   name="tanggal"
+                   class="input"
+                   required>
 
             <select name="jam" class="input">
 
                 <option value="8">08:00</option>
                 <option value="9">09:00</option>
                 <option value="10">10:00</option>
+                <option value="11">11:00</option>
+                <option value="12">12:00</option>
+                <option value="13">13:00</option>
+                <option value="14">14:00</option>
+                <option value="15">15:00</option>
+                <option value="16">16:00</option>
+                <option value="17">17:00</option>
+                <option value="18">18:00</option>
+                <option value="19">19:00</option>
+                <option value="20">20:00</option>
+                <option value="21">21:00</option>
 
             </select>
 
-            <!-- <input type="time"
-        name="jam"
-        class="input"
-        placeholder="Contoh : 19.00"
-        required> -->
+            <input type="number"
+                   name="durasi"
+                   min="1"
+                   class="input"
+                   placeholder="Durasi / Jam"
+                   required>
 
-            <input type="number" name="durasi" min="1" class="input" placeholder="Durasi / Jam" required>
-
-            <button type="submit" name="booking" class="button">
+            <button type="submit"
+                    name="booking"
+                    class="button">
                 Booking Sekarang
             </button>
 
         </form>
+
     </div>
 
 </body>
