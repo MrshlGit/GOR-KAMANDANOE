@@ -110,6 +110,7 @@ VALUES
 
         <input type="number"
         name="durasi"
+        min="1"
         class="input"
         placeholder="Durasi / Jam"
         required>
