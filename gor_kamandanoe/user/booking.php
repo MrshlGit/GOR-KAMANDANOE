@@ -37,10 +37,7 @@ if (isset($_POST['booking'])) {
         exit;
     }
 
-    // ==========================
-    // CEK TABRAKAN JADWAL
-    // ==========================
-
+    // Cek Tabrakan Jadwal
     $cekBooking = mysqli_query(
         $conn,
         "SELECT jam
