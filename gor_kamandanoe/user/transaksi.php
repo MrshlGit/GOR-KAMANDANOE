@@ -154,7 +154,8 @@ WHERE nama_user='$nama'");
 // anak anjing gogok ayok lari-lari
 // halo semua prabiwo
 // ayok joging
-//ASU
+//ASU                                                                                                                                                                                                                                                                                                                                      
 // oyok kantin lahhh, udah pengen keluar ini
+// ayosemuasjd sdgsg
 </body>
 </html>
