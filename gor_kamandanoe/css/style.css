@@ -94,29 +94,7 @@ body{
     margin-bottom:15px;
 }
 
-.button{
-    width:100%;
-    padding:12px;
-    background:#ff6b00;
-    color:white;
-    border:none;
-    cursor:pointer;
-}
-
-.table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-}
-
-.table th,
-.table td{
-    border:1px solid #ccc;
-    padding:10px;
-    text-align:center;
-}
-
-.link{
     margin-top:15px;
     text-align:center;
 }
+
