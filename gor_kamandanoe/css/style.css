@@ -126,36 +126,3 @@ body {
     margin-top: 15px;
     text-align: center;
 }
-
-<<<<<<< HEAD
-.background-jadwal {
-    background-image: url('../img/images.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-=======
-.background-jadwal{
-<<<<<<< HEAD
-    background-image:url('img/images.jpg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    min-height:100vh;
-=======
-    background-color:red !important;
->>>>>>> 9b0071b6eb307536643e02493b270bf18468536c
->>>>>>> 14c6993a33c4da27afdb61bbdddb604aa3fc7081
-}
-
-.overlay {
-    min-height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-}
-
-.judul-jadwal {
-    color: white;
-    margin-bottom: 20px;
-}
