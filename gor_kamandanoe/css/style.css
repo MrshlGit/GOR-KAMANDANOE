@@ -56,7 +56,8 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
+    height: 500px;
     margin: auto;
 }
 
@@ -65,23 +66,9 @@ body {
     flex-direction: row;
     gap: 20px;
     margin-top: 30px;
-}
-
-
-/* .card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-}
-
-.gambar {
-    border-radius: 10%;
     width: 100%;
-    height: 100%;
-} */
+    height: 500px;
+}
 
 .card {
     background: white;
@@ -89,22 +76,16 @@ body {
     flex: 1;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* TAMBAHKAN INI: agar konten tersusun dari atas ke bawah */
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* Memberi jarak otomatis antar elemen di dalam card */
 }
 
 .gambar {
     border-radius: 10%;
-    /* TAMBAHKAN INI: agar gambar memiliki ukuran pasti dan tidak hilang */
-    width: 100%;
-    /* Lebar gambar mengikuti lebar kotak card */
+    width: 200px;
     max-height: 200px;
-    /* Batas tinggi maksimal gambar */
     object-fit: cover;
-    /* Agar gambar tetap proporsional dan tidak gepeng */
 }
 
 .form-container {
