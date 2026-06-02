@@ -133,7 +133,8 @@ if (isset($_POST['booking'])) {
 
     <style>
         body {
-            background-image: url('../img/bg.jpg');
+            background-image: url('../img/bobo.jpg');
+            /* background:  hsl(30, 64%, 48%);; */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
