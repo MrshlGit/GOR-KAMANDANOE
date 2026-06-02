@@ -120,3 +120,23 @@ body{
     margin-top:15px;
     text-align:center;
 }
+
+.background-jadwal{
+    background-image: url('../img/images.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.overlay{
+    min-height: 100vh;
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+}
+
+.judul-jadwal{
+    color: white;
+    margin-bottom: 20px;
+}

@@ -13,8 +13,9 @@ $data = mysqli_query($conn,"SELECT * FROM booking");
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
-<body>
+<body class="background-jadwal">
 
+<div class="overlay">
 <div class="container">
 
     <h1>Jadwal Bermain</h1>
@@ -50,6 +51,6 @@ $data = mysqli_query($conn,"SELECT * FROM booking");
     </table>
 
 </div>
-
+</div>  
 </body>
 </html>
