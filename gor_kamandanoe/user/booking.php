@@ -3,14 +3,14 @@
 session_start();
 include "../koneksi.php";
 
-if(isset($_POST['booking'])){
+if (isset($_POST['booking'])) {
 
     $nama = $_SESSION['nama'];
 
     $lapangan = $_POST['lapangan'];
     $tanggal = $_POST['tanggal'];
-    $jam = (int)$_POST['jam'];
-    $durasi = (int)$_POST['durasi'];
+    $jam = (int) $_POST['jam'];
+    $durasi = (int) $_POST['durasi'];
     if ($durasi < 1) {
         echo "<script>alert('Durasi tidak boleh kurang dari 1 jam');history.back();</script>";
         exit;
@@ -33,22 +33,44 @@ if(isset($_POST['booking'])){
     // Format jam tampil
     $jamtotal = $jam . ":00 - " . $jam2 . ":00";
 
+    $data = mysqli_query(
+        $conn,
+        "SELECT tanggal, jam from booking"
+    );
+
+
+    $cek = mysqli_num_rows($data);
+
+    if ($cek > 0) {
+        while ($row = mysqli_fetch_array($data)) {
+            if ($tanggal == $row['tanggal'] && $jamtotal = $row['jam'] ) {
+                echo "
+                    <script>
+                        alert('Lapangan sudah di booking');
+                        window.location='register.php';
+                    </script>
+                    ";
+            }
+        }
+    }
+
+    
+
     // Harga lapangan per jam
-    if($lapangan == "Lapangan A"){
+    if ($lapangan == "Lapangan A") {
         $harga = 50000;
-    }
-    elseif($lapangan == "Lapangan B"){
+    } elseif ($lapangan == "Lapangan B") {
         $harga = 70000;
-    }
-    else{
+    } else {
         $harga = 90000;
     }
 
     // Hitung total bayar
     $total = $harga * $durasi;
 
-    mysqli_query($conn,
-"INSERT INTO booking
+    mysqli_query(
+        $conn,
+        "INSERT INTO booking
 (
     nama_user,
     lapangan,
@@ -70,7 +92,8 @@ VALUES
     '$harga',
     '$total',
     '-'
-)");
+)"
+    );
 
     echo "
     <script>
@@ -84,6 +107,7 @@ VALUES
 
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <title>Booking Lapangan</title>
@@ -91,56 +115,48 @@ VALUES
     <link rel='stylesheet' href='../css/style.css'>
 
 </head>
+
 <body>
 
-<div class="form-container">
+    <div class="form-container">
 
-    <h2>Booking Lapangan</h2>
+        <h2>Booking Lapangan</h2>
 
-    <form method="POST">
+        <form method="POST">
 
-        <select name="lapangan" class="input">
+            <select name="lapangan" class="input">
 
-            <option>Lapangan A</option>
-            <option>Lapangan B</option>
-            <option>Lapangan C</option>
+                <option>Lapangan A</option>
+                <option>Lapangan B</option>
+                <option>Lapangan C</option>
 
-        </select>
+            </select>
 
-        <input type="date"
-        name="tanggal"
-        class="input"
-        required>
+            <input type="date" name="tanggal" class="input" required>
 
-        <select name="jam" class="input">
+            <select name="jam" class="input">
 
-            <option value="8">08:00</option>
-            <option value="9">09:00</option>
-            <option value="10">10:00</option>
+                <option value="8">08:00</option>
+                <option value="9">09:00</option>
+                <option value="10">10:00</option>
 
-        </select>
+            </select>
 
-        <!-- <input type="time"
+            <!-- <input type="time"
         name="jam"
         class="input"
         placeholder="Contoh : 19.00"
         required> -->
 
-        <input type="number"
-        name="durasi"
-        min="1"
-        class="input"
-        placeholder="Durasi / Jam"
-        required>
+            <input type="number" name="durasi" min="1" class="input" placeholder="Durasi / Jam" required>
 
-        <button type="submit"
-        name="booking"
-        class="button">
-            Booking Sekarang
-        </button>
+            <button type="submit" name="booking" class="button">
+                Booking Sekarang
+            </button>
 
-    </form>
-</div>
+        </form>
+    </div>
 
 </body>
+
 </html>

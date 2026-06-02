@@ -67,17 +67,44 @@ body {
     margin-top: 30px;
 }
 
+
+/* .card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.gambar {
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+} */
+
 .card {
     background: white;
     padding: 25px;
     flex: 1;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* TAMBAHKAN INI: agar konten tersusun dari atas ke bawah */
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Memberi jarak otomatis antar elemen di dalam card */
 }
 
 .gambar {
     border-radius: 10%;
+    /* TAMBAHKAN INI: agar gambar memiliki ukuran pasti dan tidak hilang */
+    width: 100%;
+    /* Lebar gambar mengikuti lebar kotak card */
+    max-height: 200px;
+    /* Batas tinggi maksimal gambar */
+    object-fit: cover;
+    /* Agar gambar tetap proporsional dan tidak gepeng */
 }
 
 .form-container {
@@ -125,29 +152,4 @@ body {
 .link {
     margin-top: 15px;
     text-align: center;
-}
-
-<<<<<<< HEAD
-.background-jadwal {
-    background-image: url('../img/images.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-=======
-.background-jadwal{
-    background-color:red !important;
->>>>>>> 9b0071b6eb307536643e02493b270bf18468536c
-}
-
-.overlay {
-    min-height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-}
-
-.judul-jadwal {
-    color: white;
-    margin-bottom: 20px;
 }
