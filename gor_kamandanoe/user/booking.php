@@ -147,7 +147,7 @@ if (isset($_POST['booking'])) {
         }
 
         .form-container {
-            background: hsl(220, 33%, 93%);
+            background: hsl(180, 30%, 96%);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
