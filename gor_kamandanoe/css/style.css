@@ -122,12 +122,11 @@ body{
 }
 
 .background-jadwal{
-    background-image: url('../img/images.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
+    background-image:url('/plat/GOR-KAMANDANOE/gor_kamandanoe/img/images.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
 }
 
 .overlay{
