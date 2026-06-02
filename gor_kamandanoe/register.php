@@ -4,8 +4,10 @@ include "koneksi.php";
 
 if (isset($_POST['register'])) {
 
-    $nama = $_POST['nama'];
+
     $username = $_POST['username'];
+    $noHp = $_POST['noHp'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
     $data = mysqli_query(
@@ -13,13 +15,12 @@ if (isset($_POST['register'])) {
         "SELECT username from user"
     );
 
-    echo "titit";
 
     $cek = mysqli_num_rows($data);
 
     if ($cek > 0) {
         while ($row = mysqli_fetch_array($data)) {
-            if ($username ==  $row['username']) {
+            if ($username == $row['username']) {
                 echo "
                     <script>
                         alert('Username sudah digunakan');
@@ -34,8 +35,9 @@ if (isset($_POST['register'])) {
         $conn,
         "INSERT INTO user VALUES(
         NULL,
-        '$nama',
         '$username',
+        '$noHp',
+        '$email',
         '$password',
         'user'
     )"
@@ -70,9 +72,13 @@ if (isset($_POST['register'])) {
 
         <form method="POST">
 
-            <input type="text" name="nama" class="input" placeholder="Nama lengkap" required>
+
 
             <input type="text" name="username" class="input" placeholder="Username" required>
+
+            <input type="text" name="noHp" class="input" placeholder="Ex: 082299998888" required>
+
+            <input type="text" name="email" class="input" placeholder="user@gmail.com" required>
 
             <input type="password" name="password" class="input" placeholder="Password" required>
 
