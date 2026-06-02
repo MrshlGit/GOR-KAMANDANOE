@@ -127,6 +127,7 @@ body {
     text-align: center;
 }
 
+<<<<<<< HEAD
 .background-jadwal {
     background-image: url('../img/images.jpg');
     background-size: cover;
@@ -134,6 +135,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+=======
+.background-jadwal{
+    background-color:red !important;
+>>>>>>> 9b0071b6eb307536643e02493b270bf18468536c
 }
 
 .overlay {
