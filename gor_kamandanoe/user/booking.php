@@ -9,11 +9,29 @@ if(isset($_POST['booking'])){
 
     $lapangan = $_POST['lapangan'];
     $tanggal = $_POST['tanggal'];
+    $jam = (int)$_POST['jam'];
+    $durasi = (int)$_POST['durasi'];
+    if ($durasi < 1) {
+        echo "<script>alert('Durasi tidak boleh kurang dari 1 jam');history.back();</script>";
+        exit;
+    }
 
-    $jam2 = $_POST['jam'] + $_POST['durasi'];
-    $jam = $_POST['jam'];
-    $jamtotal = $jam . " - " . $jam2;
-    $durasi = $_POST['durasi'];
+    // Hitung jam selesai
+    $jam2 = $jam + $durasi;
+
+    // Validasi jam selesai (misal maksimal jam 22:00)
+    if ($jam2 > 22) {
+        echo "
+        <script>
+            alert('Jam selesai melebihi batas operasional (22:00)');
+            history.back();
+        </script>
+        ";
+        exit;
+    }
+
+    // Format jam tampil
+    $jamtotal = $jam . ":00 - " . $jam2 . ":00";
 
     // Harga lapangan per jam
     if($lapangan == "Lapangan A"){
@@ -122,7 +140,6 @@ VALUES
         </button>
 
     </form>
-
 </div>
 
 </body>

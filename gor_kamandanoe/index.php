@@ -41,18 +41,19 @@
     <div class="row">
 
         <div class="card">
-            <h2>Lapangan A</h2>
-            <p>Lapangan badminton standar nasional.</p>
+            <h2>Lapangan Karpet</h2>
+            <p>Terdapat 2 lapangan nomor 1 dan 2</p>
+            <div class="gambar">
+                <img src="karpet.jpg">
+            </div>
         </div>
 
         <div class="card">
-            <h2>Lapangan B</h2>
-            <p>Lapangan badminton premium.</p>
-        </div>
-
-        <div class="card">
-            <h2>Lapangan C</h2>
-            <p>Lapangan turnamen badminton.</p>
+            <h2>Lapangan Kayu</h2>
+            <p>Terdapat 2 lapangan nomor 3 dan 4</p>
+            <div class="gambar">
+                <img src="kayu.jpg">
+            </div>
         </div>
 
     </div>
