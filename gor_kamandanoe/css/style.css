@@ -116,6 +116,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< HEAD
 .form-container h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -157,3 +158,9 @@ body {
 =======
 }
 >>>>>>> 49738b5b0dfb0c51d6d52970b802d6529ddddc68
+=======
+    margin-top:15px;
+    text-align:center;
+}
+
+>>>>>>> 23d3d69 (dashboard.php)
