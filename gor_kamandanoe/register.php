@@ -10,6 +10,8 @@ if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    $hitung = strlen($_POST['password']);
+
     $data = mysqli_query(
         $conn,
         "SELECT username from user"
@@ -29,6 +31,15 @@ if (isset($_POST['register'])) {
                     ";
             }
         }
+    }
+
+    if ($hitung < 8) {
+        echo "
+            <script>
+                alert('password minimal 8 karakter');
+                window.location='register.php';
+            </script>
+            ";
     }
 
     mysqli_query(
