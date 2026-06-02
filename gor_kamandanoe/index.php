@@ -44,7 +44,7 @@
 
             <div class="card">
                 <h2>Lapangan Karpet</h2>
-                <p>Terdapat 2 lapangan nomor 1 dan 2</p>
+                <p>Terdapat 2 lapangan nomor 1 dan 2</p><br>
                 <div class="gambar">
                     <img src="img/karpet.jpg">
                 </div>
@@ -53,7 +53,7 @@
 
             <div class="card">
                 <h2>Lapangan Kayu</h2>
-                <p>Terdapat 2 lapangan nomor 3 dan 4</p>
+                <p>Terdapat 2 lapangan nomor 3 dan 4</p><br>
                 <div class="gambar">
                     <img src="img/kayu.jpg" class="gambar">
                 </div>
