@@ -54,14 +54,14 @@ WHERE nama_user='$nama'");
             min-height: 100vh;
             margin: 0;
         }
-
+/* 
         .payment-box{
             background:white;
             padding:20px;
             border-radius:10px;
             margin-top:20px;
             box-shadow:0 0 10px rgba(0,0,0,0.1);
-        }
+        } */
 
         .payment-btn{
             padding:10px 20px;
