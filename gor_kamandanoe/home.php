@@ -16,32 +16,26 @@
                 <img src="img/canvas.png" class="logo">
 
                 <h1>GOR KAMANDANOE</h1>
-                
 
-                 
-                    <a href="user/booking.php">Booking</a>
-                
-                
-                    <a href="user/jadwal.php">Cek Jadwal</a>
-                
-                
-                    <a href="user/transaksi.php">Pembayaran</a>
-                
-
-                <a href="index.php">Logout</a>
             </div>
 
-            <div class="panel">
-                <div class="book">
+            <div class="navbar2">
+                <div class="ayo1">
                     <a href="user/booking.php">Booking</a>
-                </div>
-                <div class="book">
+
+
                     <a href="user/jadwal.php">Cek Jadwal</a>
-                </div>
-                <div class="book">
+
+
                     <a href="user/transaksi.php">Pembayaran</a>
+
+
+                    <a href="index.php">Logout</a>
                 </div>
 
+                <div class="ayo2">
+                    <!-- <h1>Badminton?? Ayo..Ayo!!</h1> -->
+                </div>
             </div>
         </div>
         <div class="hero">

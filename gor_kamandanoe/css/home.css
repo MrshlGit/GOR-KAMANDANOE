@@ -16,7 +16,7 @@ body {
 
 .atas {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .panel {
@@ -43,6 +43,16 @@ body {
     height: 150px;
     display: flex;
     align-items: center;
+}
+
+.navbar2{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.ayo2{
+    background-color: blue;
 }
 
 .logo {
