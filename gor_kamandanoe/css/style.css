@@ -169,3 +169,121 @@ body {
     margin-top: 15px;
     text-align: center;
 }
+
+
+/* jadwal */
+.background-jadwal{
+    background-image:url('../img/images.jpg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    min-height:100vh;
+}
+
+.overlay{
+    min-height:100vh;
+    background:rgba(0,0,0,0.7);
+    padding:40px;
+}
+
+.jadwal-card{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.judul-box{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.judul-box h1{
+    color:#ff6b00;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.judul-box p{
+    color:#666;
+}
+
+.info-box{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.box-info{
+    background:#ff6b00;
+    color:white;
+    padding:15px 30px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.box-info h2{
+    font-size:28px;
+}
+
+.jadwal-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.jadwal-table th{
+    background:#ff6b00;
+    color:white;
+    padding:15px;
+}
+
+.jadwal-table td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.jadwal-table tr:nth-child(even){
+    background:#f8f8f8;
+}
+
+.jadwal-table tr:hover{
+    background:#fff2e8;
+}
+
+.status-lunas{
+    background:#28a745;
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+}
+
+.status-menunggu{
+    background:#ffc107;
+    color:black;
+    padding:6px 14px;
+    border-radius:20px;
+}
+
+.btn-area{
+    text-align:center;
+    margin-top:25px;
+}
+
+.btn-kembali{
+    display:inline-block;
+    background:#ff6b00;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn-kembali:hover{
+    background:#e65c00;
+}
