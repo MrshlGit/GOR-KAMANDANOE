@@ -37,43 +37,7 @@ WHERE nama_user='$nama'");
 
     <title>Transaksi</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-
-    <style>
-        body {
-            background-image: url('../img/bobo.jpg');
-            /* background:  hsl(30, 64%, 48%);; */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .payment-box{
-            background:white;
-            padding:20px;
-            border-radius:10px;
-            margin-top:20px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .payment-btn{
-            padding:10px 20px;
-            border:none;
-            background:#ff6b00;
-            color:white;
-            cursor:pointer;
-            margin-right:10px;
-            border-radius:5px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../css/transaksi.css">
 
 </head>
 <body>
@@ -89,6 +53,7 @@ WHERE nama_user='$nama'");
     ?>
 
     <div class="payment-box">
+
         <h3>
             <?php echo $d['lapangan']; ?>
         </h3>
@@ -160,5 +125,6 @@ WHERE nama_user='$nama'");
     <?php } ?>
 
 </div>
+
 </body>
 </html>
