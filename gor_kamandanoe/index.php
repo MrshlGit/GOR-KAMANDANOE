@@ -46,7 +46,7 @@
                 <h2>Lapangan Karpet</h2>
                 <p>Terdapat 2 lapangan nomor 1 dan 2</p><br>
                 <div class="gambar">
-                    <img src="img/karpet.jpg">
+                    <img src="img/karpet.jpg" class="gambar">
                 </div>
             </div>
 
@@ -62,6 +62,41 @@
 
 
         </div>
+
+    </div>
+
+    <div class="container2">
+
+        <!-- <div class="row2"> -->
+
+        <div class="card2">
+            <a href="booking.php">
+                <img src="img/book.jpg">
+                <div class="text1">
+                    <h1>Booking Lapangan</h1>
+
+                </div>
+        </div>
+
+        <div class="card2">
+
+            <a href="jadwal.php">
+                <img src="img/jadwaljpg.jpg">
+                <div class="text1">
+                    <h1>Jadwal Bermain</h1>
+                </div>
+
+        </div>
+
+        <div class="card2">
+            <a href="transaksi.php">
+                <img src="img/transaksi.jpg">
+                <div class="text1">
+                    <h1>Transaksi</h1>
+                </div>
+        </div>
+
+        <!-- </div> -->
 
     </div>
 
