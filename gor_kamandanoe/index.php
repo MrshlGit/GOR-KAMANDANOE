@@ -13,9 +13,10 @@
 
     <div class="navbar">
 
-        <span class="logo">
+        <div class="logo">
+            <img src="img/logo.jpg">
             GOR Kamandanoe
-        </span>
+        </div>
 
         <div class="menu">
             <a href="login.php">Login</a>
