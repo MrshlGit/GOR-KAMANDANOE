@@ -34,6 +34,7 @@ body {
 .book a {
     color: white;
     text-decoration: none;
+    margin-left: auto;
 }
 
 .navbar {
@@ -41,18 +42,20 @@ body {
     padding: 20px;
     height: 150px;
     display: flex;
-    flex-direction: row;
-    text-align: center;
+    align-items: center;
 }
 
 .logo {
+    background-color:black;
     object-fit: cover;
-    width: 80px;
-    height: 80px;
+    width: 130px;
+    height: 130px;
 }
 
 .navbar h1 {
     color: white;
+    text-align: center;
+    /* flex: 1; */
 }
 
 .navbar a {

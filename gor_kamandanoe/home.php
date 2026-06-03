@@ -13,11 +13,22 @@
     <div class="besar">
         <div class="atas">
             <div class="navbar">
+                <img src="img/canvas.png" class="logo">
 
-                <img src="img/logo.jpg" class="logo">
                 <h1>GOR KAMANDANOE</h1>
-                <a href="index.php">Logout</a>
+                
 
+                 
+                    <a href="user/booking.php">Booking</a>
+                
+                
+                    <a href="user/jadwal.php">Cek Jadwal</a>
+                
+                
+                    <a href="user/transaksi.php">Pembayaran</a>
+                
+
+                <a href="index.php">Logout</a>
             </div>
 
             <div class="panel">
