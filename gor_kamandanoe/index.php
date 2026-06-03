@@ -14,7 +14,7 @@
     <div class="navbar">
 
         <div class="logo">
-            <img src="img/logo.jpg">
+
             GOR Kamandanoe
         </div>
 
