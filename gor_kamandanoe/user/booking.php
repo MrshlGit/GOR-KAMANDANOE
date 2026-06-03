@@ -129,32 +129,7 @@ if (isset($_POST['booking'])) {
 
 <head>
     <title>Booking Lapangan</title>
-    <link rel='stylesheet' href='../css/style.css'>
-
-    <style>
-        body {
-            background-image: url('../img/bobo.jpg');
-            /* background:  hsl(30, 64%, 48%);; */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .form-container {
-            background: hsl(180, 30%, 96%);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        }
-    </style>
-
+    <link rel='stylesheet' href='../css/boking.css'>
 </head>
 
 <body>
