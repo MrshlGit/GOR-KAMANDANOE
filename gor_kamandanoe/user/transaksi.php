@@ -40,6 +40,20 @@ WHERE nama_user='$nama'");
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
+        body {
+            background-image: url('../img/bobo.jpg');
+            /* background:  hsl(30, 64%, 48%);; */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
 
         .payment-box{
             background:white;
