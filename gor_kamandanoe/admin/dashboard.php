@@ -10,7 +10,7 @@ $total_booking_hari = mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM 
 $total_booking = mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM booking"))[0];
 $total_pendapatan = mysqli_fetch_row(mysqli_query($conn,"SELECT SUM(total_bayar) FROM booking WHERE status='Lunas'"))[0] ?? 0;
 $total_turnamen = mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM turnamen"))[0];
-$booking_terbaru = mysqli_query($conn,"SELECT * FROM booking ORDER BY id_booking DESC LIMIT 6");
+$booking_terbaru = mysqli_query($conn,"SELECT * FROM booking WHERE nama_user!='' ORDER BY id_booking DESC LIMIT 6");
 
 function formatRp($n){ return 'Rp '.number_format($n,0,',','.'); }
 ?>
@@ -61,7 +61,7 @@ function formatRp($n){ return 'Rp '.number_format($n,0,',','.'); }
     <div class="card-box">
       <div class="card-box-header">
         <span class="card-box-title">Riwayat Pemesanan Terbaru</span>
-        <a href="data_booking.php" style="font-size:12px;color:#e85d04;text-decoration:none;font-weight:600;">Lihat Semua &#8594;</a>
+        <a href="Pemesanan.php" style="font-size:12px;color:#e85d04;text-decoration:none;font-weight:600;">Lihat Semua &#8594;</a>
       </div>
       <div class="card-box-body">
         <table class="data-table">
@@ -115,7 +115,7 @@ function formatRp($n){ return 'Rp '.number_format($n,0,',','.'); }
       <div class="card-box">
         <div class="card-box-header"><span class="card-box-title">Akses Cepat</span></div>
         <div style="padding:16px;display:flex;flex-direction:column;gap:8px;">
-          <a href="data_booking.php?aksi=tambah" class="btn-action btn-primary" style="text-decoration:none;justify-content:center;">+ Tambah Booking</a>
+          <a href="Pemesanan.php?aksi=tambah" class="btn-action btn-primary" style="text-decoration:none;justify-content:center;">+ Tambah Booking</a>
           <a href="data_turnamen.php?aksi=tambah" class="btn-action btn-secondary" style="text-decoration:none;justify-content:center;">+ Tambah Turnamen</a>
           <a href="data_user.php" class="btn-action btn-secondary" style="text-decoration:none;justify-content:center;">Kelola Pengguna</a>
         </div>

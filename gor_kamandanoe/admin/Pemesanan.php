@@ -52,7 +52,7 @@ $total_menunggu=mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM bookin
 $total_pendapatan=mysqli_fetch_row(mysqli_query($conn,"SELECT SUM(total_bayar) FROM booking WHERE status='Lunas'"))[0]??0;
 
 $data=mysqli_query($conn,"SELECT * FROM booking $where ORDER BY id_booking DESC");
-$users=mysqli_query($conn,"SELECT nama FROM user WHERE role='user' ORDER BY nama");
+$users=mysqli_query($conn,"SELECT username FROM user WHERE role='user' ORDER BY username");
 ?>
 <!DOCTYPE html><html lang="id"><head>
 <meta charset="UTF-8"><title>Pemesanan - GOR Kamandanoe</title>
@@ -135,8 +135,8 @@ $users=mysqli_query($conn,"SELECT nama FROM user WHERE role='user' ORDER BY nama
       <div class="two-col">
         <div class="form-group"><label>Nama Pemesan</label>
           <select name="nama_user" class="form-control">
-            <?php $users2=mysqli_query($conn,"SELECT nama FROM user WHERE role='user'"); while($u=mysqli_fetch_array($users2)): ?>
-            <option><?=htmlspecialchars($u['nama'])?></option>
+            <?php $users2=mysqli_query($conn,"SELECT username FROM user WHERE role='user'"); while($u=mysqli_fetch_array($users2)): ?>
+            <option><?=htmlspecialchars($u['username'])?></option>
             <?php endwhile; ?>
           </select>
         </div>

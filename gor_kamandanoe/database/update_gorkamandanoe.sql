@@ -31,7 +31,7 @@ CREATE TABLE `booking` (
   `total_bayar` int(20) DEFAULT NULL,
   `metode_pembayaran` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_booking`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `booking` */
 
@@ -43,7 +43,20 @@ insert  into `booking`(`id_booking`,`nama_user`,`lapangan`,`tanggal`,`jam`,`stat
 (5,'Isnan','Lapangan A','2026-05-28','18.00','Lunas',50000,150000,'Cash'),
 (6,'Isnan','Lapangan A','2026-05-28','18.00','Menunggu',50000,150000,'-'),
 (7,'Isnan','Lapangan A','2026-05-28','18.00','Menunggu',50000,150000,'-'),
-(8,'Isnan','Lapangan A','2026-05-12','18.00','Menunggu',50000,100000,'-');
+(8,'Isnan','Lapangan A','2026-05-12','18.00','Lunas',50000,100000,'QRIS'),
+(9,'Isnan','Lapangan A','2026-05-05','8','Lunas',50000,50000,'Cash'),
+(10,'Isnan','Lapangan A','2026-05-21','9 - 10','Lunas',50000,50000,'QRIS'),
+(11,'Isnan','Lapangan B','2026-05-10','9 - 11','Lunas',70000,140000,'QRIS'),
+(12,'Isnan','Lapangan A','2026-05-29','8 - 9','Lunas',50000,50000,'QRIS'),
+(13,'Isnan','Lapangan A','2026-06-11','8 - 6','Menunggu',50000,-100000,'-'),
+(14,'','Lapangan A','2026-05-21','9:00 - 10:00','Menunggu',50000,50000,'-'),
+(15,'','Lapangan A','2026-05-21','9:00 - 10:00','Menunggu',50000,50000,'-'),
+(16,'','Lapangan A','2026-05-21','9:00 - 10:00','Menunggu',50000,100000,'-'),
+(17,'','Lapangan A','2026-05-21','9:00 - 10:00','Menunggu',50000,150000,'-'),
+(18,'','Lapangan B','2026-05-21','9:00 - 10:00','Menunggu',70000,210000,'-'),
+(19,'','Lapangan A','2026-06-04','8:00 - 10:00','Menunggu',50000,100000,'-'),
+(20,'','Lapangan B','2026-05-21','9:00 - 10:00','Menunggu',70000,140000,'-'),
+(21,'','Lapangan B','2026-05-21','12:00 - 13:00','Menunggu',70000,70000,'-');
 
 /*Table structure for table `turnamen` */
 
@@ -69,20 +82,23 @@ DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(100) DEFAULT NULL,
   `username` varchar(100) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL,
-  `role` varchar(20) DEFAULT NULL,
+  `noHp` varchar(20) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `role` enum('admin','user') DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`nama`,`username`,`password`,`role`) values 
-(1,'Viktor','Viktor','12345','admin'),
-(2,'Isnan','Isnan','12345','user'),
-(3,'Marshel','Marshel',NULL,'user'),
-(4,'Messi','messi','12345','user');
+insert  into `user`(`id`,`username`,`noHp`,`email`,`password`,`role`) values 
+(1,'Viktor','082213456789','viktor@gmail.com','12345','admin'),
+(2,'Isnan','2147483647','isnan@gmail.com','12345','user'),
+(3,'Messi','0','12345','user',NULL),
+(4,'bude','2147483647','bude@gmail.com','12345','user'),
+(5,'abdi','081233445566','abdi@gmail.com','12345','user'),
+(6,'abdio','081233445566','abdi0@gmail.com','s','user');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

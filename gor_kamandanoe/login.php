@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
 
         $d = mysqli_fetch_array($data);
 
-        $_SESSION['nama'] = $d['nama'];
+        $_SESSION['nama'] = $d['username'];
         $_SESSION['role'] = $d['role'];
 
         if ($d['role'] == "admin") {
