@@ -549,7 +549,7 @@ table.data-table tr:hover td {
     <a href="data_turnamen.php" class="nav-item <?= $current=='data_turnamen.php'?'active':'' ?>">
       <span class="icon">&#9670;</span> Manaj. Turnamen
     </a>
-    <a href="data_booking.php" class="nav-item <?= $current=='data_booking.php'?'active':'' ?>">
+    <a href="Pemesanan.php" class="nav-item <?= $current=='Pemesanan.php'?'active':'' ?>">
       <span class="icon">&#9733;</span> Pemesanan
     </a>
     <a href="pembayaran.php" class="nav-item <?= $current=='pembayaran.php'?'active':'' ?>">

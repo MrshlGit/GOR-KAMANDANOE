@@ -134,6 +134,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f736ae9dcabc4dc332134e1100b77dc01c2fd14f
 .form-container h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -170,6 +175,28 @@ body {
 .link {
     margin-top: 15px;
     text-align: center;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 49738b5b0dfb0c51d6d52970b802d6529ddddc68
+=======
+=======
+>>>>>>> 23d3d69850b251a4a21a0b04f81e99b7bc858bdc
+    margin-top:15px;
+    text-align:center;
+}
+
+<<<<<<< HEAD
+>>>>>>> 23d3d69 (dashboard.php)
+=======
+>>>>>>> 23d3d69850b251a4a21a0b04f81e99b7bc858bdc
+=======
+}
+>>>>>>> f736ae9dcabc4dc332134e1100b77dc01c2fd14f
+=======
 }
 
 
@@ -287,6 +314,13 @@ body {
     font-weight: bold;
 }
 
+<<<<<<< HEAD
 .btn-kembali:hover {
     background: #e65c00;
 }
+=======
+.btn-kembali:hover{
+    background:#e65c00;
+}
+>>>>>>> e0c0b3cfd320c8bef724f7dfefd40a72a2b67c34
+>>>>>>> 9557645443c3a9cc6bdef0e9f5608a81228f530b
