@@ -37,10 +37,7 @@ if (isset($_POST['booking'])) {
         exit;
     }
 
-    // ==========================
-    // CEK TABRAKAN JADWAL
-    // ==========================
-
+    // Cek Tabrakan Jadwal
     $cekBooking = mysqli_query(
         $conn,
         "SELECT jam
@@ -126,12 +123,37 @@ if (isset($_POST['booking'])) {
 
 ?>
 
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Booking Lapangan</title>
     <link rel='stylesheet' href='../css/style.css'>
+
+    <style>
+        body {
+            background-image: url('../img/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: hsl(180, 30%, 96%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -143,11 +165,9 @@ if (isset($_POST['booking'])) {
         <form method="POST">
 
             <select name="lapangan" class="input">
-
                 <option>Lapangan A</option>
                 <option>Lapangan B</option>
                 <option>Lapangan C</option>
-
             </select>
 
             <input type="date"
@@ -156,7 +176,6 @@ if (isset($_POST['booking'])) {
                    required>
 
             <select name="jam" class="input">
-
                 <option value="8">08:00</option>
                 <option value="9">09:00</option>
                 <option value="10">10:00</option>
@@ -171,7 +190,6 @@ if (isset($_POST['booking'])) {
                 <option value="19">19:00</option>
                 <option value="20">20:00</option>
                 <option value="21">21:00</option>
-
             </select>
 
             <input type="number"
@@ -188,9 +206,7 @@ if (isset($_POST['booking'])) {
             </button>
 
         </form>
-
     </div>
 
 </body>
-
 </html>
