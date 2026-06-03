@@ -12,6 +12,7 @@ body {
 .navbar {
     background: #111;
     padding: 20px;
+    height: 100px;
 }
 
 .logo {
@@ -134,12 +135,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f736ae9dcabc4dc332134e1100b77dc01c2fd14f
-.form-container h2 {
+<<<<<<< HEAD <<<<<<< HEAD <<<<<<< HEAD=======>>>>>>>f736ae9dcabc4dc332134e1100b77dc01c2fd14f .form-container h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -175,33 +171,20 @@ body {
 .link {
     margin-top: 15px;
     text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 49738b5b0dfb0c51d6d52970b802d6529ddddc68
-=======
-=======
->>>>>>> 23d3d69850b251a4a21a0b04f81e99b7bc858bdc
-    margin-top:15px;
-    text-align:center;
 }
 
-<<<<<<< HEAD
->>>>>>> 23d3d69 (dashboard.php)
-=======
->>>>>>> 23d3d69850b251a4a21a0b04f81e99b7bc858bdc
 =======
 }
->>>>>>> f736ae9dcabc4dc332134e1100b77dc01c2fd14f
-=======
-}
+>>>>>>>49738b5b0dfb0c51d6d52970b802d6529ddddc68==============>>>>>>>23d3d69850b251a4a21a0b04f81e99b7bc858bdc margin-top:15px;
+text-align:center;
 
+}
+<<<<<<< HEAD>>>>>>>23d3d69 (dashboard.php)=======>>>>>>>23d3d69850b251a4a21a0b04f81e99b7bc858bdc=======
+}
+>>>>>>>f736ae9dcabc4dc332134e1100b77dc01c2fd14f=======
+}
 
 /* jadwal */
-
 .background-jadwal {
     background-image: url('../img/images.jpg');
     background-size: cover;
@@ -210,13 +193,14 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
 }
-
 .overlay {
     min-height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0,
+    0,
+    0,
+    0.7);
     padding: 40px;
 }
-
 .jadwal-card {
     width: 90%;
     max-width: 1200px;
@@ -224,30 +208,28 @@ body {
     background: white;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0,
+    0,
+    0,
+    0.3);
 }
-
 .judul-box {
     text-align: center;
     margin-bottom: 25px;
 }
-
 .judul-box h1 {
     color: #ff6b00;
     font-size: 42px;
     margin-bottom: 10px;
 }
-
 .judul-box p {
     color: #666;
 }
-
 .info-box {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
-
 .box-info {
     background: #ff6b00;
     color: white;
@@ -255,55 +237,45 @@ body {
     border-radius: 10px;
     text-align: center;
 }
-
 .box-info h2 {
     font-size: 28px;
 }
-
 .jadwal-table {
     width: 100%;
     border-collapse: collapse;
 }
-
 .jadwal-table th {
     background: #ff6b00;
     color: white;
     padding: 15px;
 }
-
 .jadwal-table td {
     padding: 14px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
-
 .jadwal-table tr:nth-child(even) {
     background: #f8f8f8;
 }
-
 .jadwal-table tr:hover {
     background: #fff2e8;
 }
-
 .status-lunas {
     background: #28a745;
     color: white;
     padding: 6px 14px;
     border-radius: 20px;
 }
-
 .status-menunggu {
     background: #ffc107;
     color: black;
     padding: 6px 14px;
     border-radius: 20px;
 }
-
 .btn-area {
     text-align: center;
     margin-top: 25px;
 }
-
 .btn-kembali {
     display: inline-block;
     background: #ff6b00;
@@ -313,14 +285,10 @@ body {
     border-radius: 8px;
     font-weight: bold;
 }
-
-<<<<<<< HEAD
-.btn-kembali:hover {
+<<<<<<< HEAD .btn-kembali:hover {
     background: #e65c00;
 }
-=======
-.btn-kembali:hover{
+=======.btn-kembali:hover {
     background:#e65c00;
 }
->>>>>>> e0c0b3cfd320c8bef724f7dfefd40a72a2b67c34
->>>>>>> 9557645443c3a9cc6bdef0e9f5608a81228f530b
+>>>>>>>e0c0b3cfd320c8bef724f7dfefd40a72a2b67c34>>>>>>>9557645443c3a9cc6bdef0e9f5608a81228f530b
