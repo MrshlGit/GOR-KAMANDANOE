@@ -23,21 +23,19 @@
                 <div class="ayo1">
                     <a href="user/booking.php">Booking</a>
 
-
                     <a href="user/jadwal.php">Cek Jadwal</a>
 
-
                     <a href="user/transaksi.php">Pembayaran</a>
-
 
                     <a href="index.php">Logout</a>
                 </div>
 
                 <div class="ayo2">
-                    <!-- <h1>Badminton?? Ayo..Ayo!!</h1> -->
+                    <h1>BADMINTON?? AYO..AYO!!</h1>
                 </div>
             </div>
         </div>
+
         <div class="hero">
 
             <a href="user/booking.php" class="btn">
@@ -47,9 +45,7 @@
         </div>
 
         <div class="container">
-
-            <div class="row">
-
+ 
                 <div class="card">
                     <h2>Lapangan Karpet</h2>
                     <p>Terdapat 2 lapangan nomor 1 dan 2</p><br>
@@ -57,7 +53,6 @@
                         <img src="img/karpet.jpg" class="gambar">
                     </div>
                 </div>
-
 
                 <div class="card">
                     <h2>Lapangan Kayu</h2>
@@ -67,15 +62,9 @@
                     </div>
                 </div>
 
-
-
-            </div>
-
         </div>
 
         <div class="container2">
-
-            <!-- <div class="row2"> -->
 
             <div class="card2">
                 <a href="user/booking.php">
@@ -87,13 +76,11 @@
             </div>
 
             <div class="card2">
-
                 <a href="user/jadwal.php">
                     <img src="img/jadwaljpg.jpg">
                     <div class="text1">
                         <h1>Jadwal Bermain</h1>
                     </div>
-
             </div>
 
             <div class="card2">
