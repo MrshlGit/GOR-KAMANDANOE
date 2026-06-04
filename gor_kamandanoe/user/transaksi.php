@@ -6,16 +6,18 @@ include "../koneksi.php";
 $nama = $_SESSION['nama'];
 
 // proses pembayaran
-if(isset($_POST['bayar'])){
+if (isset($_POST['bayar'])) {
 
     $id_booking = $_POST['id_booking'];
     $metode = $_POST['metode'];
 
-    mysqli_query($conn,
-    "UPDATE booking SET
+    mysqli_query(
+        $conn,
+        "UPDATE booking SET
     status='Lunas',
     metode_pembayaran='$metode'
-    WHERE id_booking='$id_booking'");
+    WHERE id_booking='$id_booking'"
+    );
 
     echo "
     <script>
@@ -25,14 +27,17 @@ if(isset($_POST['bayar'])){
     ";
 }
 
-$data = mysqli_query($conn,
-"SELECT * FROM booking
-WHERE nama_user='$nama'");
+$data = mysqli_query(
+    $conn,
+    "SELECT * FROM booking
+WHERE nama_user='$nama'"
+);
 
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <title>Transaksi</title>
@@ -40,91 +45,100 @@ WHERE nama_user='$nama'");
     <link rel="stylesheet" href="../css/transaksi.css">
 
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <h1 style="margin-top:30px;">
-        Tagihan Pembayaran
-    </h1>
-
-    <?php
-    while($d=mysqli_fetch_array($data)){
-    ?>
-
-    <div class="payment-box">
-
-        <h3>
-            <?php echo $d['lapangan']; ?>
-        </h3>
-
-        <p>
-            Tanggal :
-            <?php echo $d['tanggal']; ?>
-        </p>
-
-        <p>
-            Jam :
-            <?php echo $d['jam'];  ?>
-        </p>
-
-        <p>
-            Total Bayar :
-            <b>
-                Rp <?php echo number_format($d['total_bayar']); ?>
-            </b>
-        </p>
-
-        <p>
-            Status :
-            <b>
-                <?php echo $d['status']; ?>
-            </b>
-        </p>
-
-        <p>
-            Metode :
-            <?php echo $d['metode_pembayaran']; ?>
-        </p>
+        <h1 style="margin-top:30px;">
+            Tagihan Pembayaran
+        </h1>
 
         <?php
-        if($d['status'] != "Lunas"){
-        ?>
+        while ($d = mysqli_fetch_array($data)) {
+            ?>
+            <div class="bungkus">
+                <div class="payment-box">
+                    <div class="data">
 
-        <form method="POST">
+                        <h3>
+                            <?php echo $d['lapangan']; ?>
+                        </h3>
 
-            <input type="hidden"
-            name="id_booking"
-            value="<?php echo $d['id_booking']; ?>">
+                        <p>
+                            Tanggal :
+                            <?php echo $d['tanggal']; ?>
+                        </p>
 
-            <button type="submit"
-            name="bayar"
-            value="QRIS"
-            class="payment-btn"
-            onclick="this.form.metode.value='QRIS'">
-                Bayar QRIS
-            </button>
+                        <p>
+                            Jam :
+                            <?php echo $d['jam']; ?>
+                        </p>
 
-            <button type="submit"
-            name="bayar"
-            value="Cash"
-            class="payment-btn"
-            onclick="this.form.metode.value='Cash'">
-                Bayar Cash
-            </button>
 
-            <input type="hidden"
-            name="metode">
 
-        </form>
+                        <?php
+                        if ($d['status'] != "Lunas") {
+                            ?>
 
+                            <form method="POST">
+
+                                <input type="hidden" name="id_booking" value="<?php echo $d['id_booking']; ?>">
+
+                                <button type="submit" name="bayar" value="QRIS" class="payment-btn"
+                                    onclick="this.form.metode.value='QRIS'">
+                                    Bayar QRIS
+                                </button>
+
+                                <button type="submit" name="bayar" value="Cash" class="payment-btn"
+                                    onclick="this.form.metode.value='Cash'">
+                                    Bayar Cash
+                                </button>
+
+                                <input type="hidden" name="metode">
+
+                            </form>
+
+                        <?php } ?>
+                    </div>
+
+                    <div class="lapangan">
+
+
+                    </div>
+
+                </div>
+
+                <div class="box2">
+                    <p>
+                        Total Bayar :
+                        <b>
+                            Rp <?php echo number_format($d['total_bayar']); ?>
+                        </b>
+                    </p>
+
+                    <p>
+                        Status :
+                        <b>
+                            <?php echo $d['status']; ?>
+                        </b>
+                    </p>
+
+                    <p>
+                        Metode :
+                        <?php echo $d['metode_pembayaran']; ?>
+                    </p>
+
+                </div>
+
+            </div>
         <?php } ?>
+
+
+
 
     </div>
 
-    <?php } ?>
-
-</div>
-
 </body>
+
 </html>
