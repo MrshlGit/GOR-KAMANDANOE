@@ -13,10 +13,9 @@
 
     <div class="navbar">
 
-        <div class="logo">
-
+        <span class="logo">
             GOR Kamandanoe
-        </div>
+        </span>
 
         <div class="menu">
             <a href="view/login_view.php">Login</a>
@@ -33,7 +32,7 @@
             Sistem Informasi GOR Kamandanoe
         </p>
 
-        <a href="login.php" class="btn">
+        <a href="view/login_view.php" class="btn">
             Mulai Booking
         </a>
 

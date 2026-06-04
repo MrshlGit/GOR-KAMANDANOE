@@ -22,7 +22,7 @@ if (isset($_POST['bayar'])) {
     echo "
     <script>
         alert('Pembayaran berhasil');
-        window.location='transaksi.php';
+        window.location='../view/transaksi_view.php';
     </script>
     ";
 }
