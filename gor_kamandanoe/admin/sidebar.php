@@ -24,8 +24,7 @@ if(isset($conn)){
     <a href="data_user.php"   class="nav-item <?= $current=='data_user.php'  ?'active':'' ?>">Manajemen Akun</a>
     <a href="info_layanan.php" class="nav-item <?= $current=='info_layanan.php'?'active':'' ?>">Info Layanan</a>
     <a href="Pemesanan.php"   class="nav-item <?= $current=='Pemesanan.php'  ?'active':'' ?>">Pemesanan</a>
-    <a href="feedback.php"    class="nav-item <?= $current=='feedback.php'   ?'active':'' ?>">
-      Kritik &amp; Saran
+   
       <?php if ($unread_count > 0): ?>
         <span class="unread-count"><?= $unread_count ?></span>
       <?php endif; ?>

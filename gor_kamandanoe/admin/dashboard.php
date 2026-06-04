@@ -43,7 +43,7 @@ function formatRp($n){ return 'Rp '.number_format($n,0,',','.'); }
       <div class="stat-change neutral">Hari ini: <?= $total_booking_hari ?></div>
     </div>
     <div class="stat-card">
-      <div class="stat-value-sm"><?= formatRp($total_pendapatan) ?></div>
+      <div class="stat-value-sm" style="color:#e05c00;"><?= formatRp($total_pendapatan) ?></div>
       <div class="stat-label">Total Pendapatan</div>
       <div class="stat-change up">Dari booking lunas</div>
     </div>
@@ -53,7 +53,7 @@ function formatRp($n){ return 'Rp '.number_format($n,0,',','.'); }
     <div class="card-box">
       <div class="card-box-header">
         <span class="card-box-title">Riwayat Pemesanan Terbaru</span>
-        <a href="Pemesanan.php" class="btn-link">Lihat Semua →</a>
+        <a href="Pemesanan.php" class="btn-link">Lihat Semua </a>
       </div>
       <table class="data-table">
         <thead><tr><th>Nama</th><th>Lapangan</th><th>Tanggal</th><th>Status</th></tr></thead>
