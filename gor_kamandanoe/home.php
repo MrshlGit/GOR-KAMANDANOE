@@ -20,19 +20,15 @@
             </div>
 
             <div class="navbar2">
-                <div class="ayo1">
-                    <a href="user/booking.php">Booking</a>
 
-                    <a href="user/jadwal.php">Cek Jadwal</a>
+                <a href="user/booking.php">Booking</a>
 
-                    <a href="user/transaksi.php">Pembayaran</a>
+                <a href="user/jadwal.php">Cek Jadwal</a>
 
-                    <a href="index.php">Logout</a>
-                </div>
+                <a href="user/transaksi.php">Pembayaran</a>
 
-                <div class="ayo2">
-                    <h1>BADMINTON?? AYO..AYO!!</h1>
-                </div>
+                <a href="index.php">Logout</a>
+
             </div>
         </div>
 
@@ -45,22 +41,20 @@
         </div>
 
         <div class="container">
- 
-                <div class="card">
-                    <h2>Lapangan Karpet</h2>
-                    <p>Terdapat 2 lapangan nomor 1 dan 2</p><br>
-                    <div class="gambar">
-                        <img src="img/karpet.jpg" class="gambar">
-                    </div>
-                </div>
 
-                <div class="card">
-                    <h2>Lapangan Kayu</h2>
-                    <p>Terdapat 2 lapangan nomor 3 dan 4</p><br>
-                    <div class="gambar">
-                        <img src="img/kayu.jpg" class="gambar">
-                    </div>
+            <div class="card">
+                <div class="latar">
+                    <h2>Lapangan Karpet 🏸</h2><br>
+                    <p>Terdapat 2 lapangan nomor 1 dan 2</p>
                 </div>
+            </div>
+
+            <div class="cards">
+                <div class="latar">
+                    <h2>Lapangan Kayu 🏸</h2><br>
+                    <p>Terdapat 2 lapangan nomor 3 dan 4</p>
+                </div>
+            </div>
 
         </div>
 
