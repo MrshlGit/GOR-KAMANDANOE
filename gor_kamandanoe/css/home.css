@@ -66,6 +66,15 @@ body {
 }
 
 .navbar2 a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar2 a:hover {
+    color: black;
+    transform: translateY(-8px);
+}
+
+.navbar2 a {
     padding: 10px;
     margin: 10px;
     text-decoration: none;
@@ -115,6 +124,14 @@ body {
     text-decoration: none;
     border-radius: 25px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff6b00;
+    /* Berubah jadi oranye */
+    color: white;
+    /* Tulisan berubah jadi putih */
 }
 
 .container {
@@ -146,6 +163,7 @@ body {
     /* object-fit: cover; */
     display: flex;
     flex-direction: row;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cards {
@@ -165,6 +183,15 @@ body {
     /* object-fit: cover; */
     display: flex;
     flex-direction: row;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.cards:hover {
+    transform: translateY(-8px);
+    /* Mengangkat kotak ke atas sejauh 8px */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    /* Bayangan bawahnya jadi lebih tebal/luas */
 }
 
 .latar {
@@ -186,40 +213,63 @@ body {
 }
 
 .container2 {
-    width: 100%;
+    height: 500px;
     display: flex;
     flex-direction: row;
     gap: 10px;
-    background-color: blue;
+    background-color: white;
     align-items: center;
     justify-content: center;
 }
 
 .card2 {
-    background: white;
-    padding: 30px;
-    margin-top: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.5);
     width: 400px;
-    height: 300px;
+    height: 350px;
 }
 
-.card2 img {
+.topik {
+    background-color: #ff6b00;
+    height: 50px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+
+.isi1,
+.isi2,
+.isi3 {
+    flex: 1;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.text1 {
-    position: relative;
-    bottom: 5px;
-    left: 25px;
-    font-size: 70%;
-    text-decoration: none;
+.isi1 {
+    background-image: url(../img/12.jpg);
 }
 
-.text1 h1 {
-    color: black;
+.isi2 {
+    background-image: url(../img/13.jpg);
+}
+
+.isi3 {
+    background-image: url(../img/14.jpg);
+}
+
+.isi1:hover,
+.isi2:hover,
+.isi3:hover {
+    transform: scale(1.06);
+    /* Gambar otomatis nge-zoom membesar sebanyak 6% */
 }

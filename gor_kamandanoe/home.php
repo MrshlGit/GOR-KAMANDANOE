@@ -21,13 +21,13 @@
 
             <div class="navbar2">
 
-                <a href="user/booking.php">Booking</a>
+                <a href="user/booking.php"><strong>Booking</strong></a>
 
-                <a href="user/jadwal.php">Cek Jadwal</a>
+                <a href="user/jadwal.php"><strong>Cek Jadwal</strong></a>
 
-                <a href="user/transaksi.php">Pembayaran</a>
+                <a href="user/transaksi.php"><strong>Pembayaran</strong></a>
 
-                <a href="index.php">Logout</a>
+                <a href="index.php"><strong>Logout</strong></a>
 
             </div>
         </div>
@@ -61,28 +61,30 @@
         <div class="container2">
 
             <div class="card2">
-                <a href="user/booking.php">
-                    <img src="img/book.jpg">
-                    <div class="text1">
-                        <h1>Booking Lapangan</h1>
-
-                    </div>
+                <div class="topik">
+                    <h3>Booking Lapangan</h3>
+                </div>
+                <div class="isi1">
+                    <a href="user/booking.php"></a>
+                </div>
             </div>
 
             <div class="card2">
-                <a href="user/jadwal.php">
-                    <img src="img/jadwaljpg.jpg">
-                    <div class="text1">
-                        <h1>Jadwal Bermain</h1>
-                    </div>
+                <div class="topik">
+                    <h3>Cek Jadwal</h3>
+                </div>
+                <div class="isi2">
+                    <a href="user/jadwal.php"></a>
+                </div>
             </div>
 
             <div class="card2">
-                <a href="user/transaksi.php">
-                    <img src="img/transaksi.jpg">
-                    <div class="text1">
-                        <h1>Transaksi</h1>
-                    </div>
+                <div class="topik">
+                    <h3>Transaksi</h3>
+                </div>
+                <div class="isi3">
+                    <a href="user/transaksi.php"></a>
+                </div>
             </div>
 
 
