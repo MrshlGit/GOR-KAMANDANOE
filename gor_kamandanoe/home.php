@@ -34,8 +34,9 @@
 
         <div class="hero">
 
-            <a href="user/booking.php" class="btn">
-                Mulai Booking
+            <a href="https://www.google.com/maps/place/GOR+Kamandanoe/@-7.7533754,110.4410462,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7a5a32fdfadf89:0x92648a5d8a236746!8m2!3d-7.7533754!4d110.4410462!16s%2Fg%2F11c48nw0j8"
+               target="_blank" class="btn">
+                📍 Lihat Lokasi GOR
             </a>
 
         </div>
