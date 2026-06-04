@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
         $_SESSION['role'] = $d['role'];
 
         if ($d['role'] == "admin") {
-            header("location:admin/dashboard.php");
+            header("location:../admin/dashboard.php");
         } else {
             header("location:home.php");
         }
