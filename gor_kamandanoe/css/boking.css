@@ -53,12 +53,3 @@ body{
 .button:hover{
     background:#e65c00;
 }
-
-/* Gambar kiri */
-.kiri{
-    position:absolute;
-    left:80px;
-    bottom:20px;
-    width:350px;
-    z-index:1;
-}
