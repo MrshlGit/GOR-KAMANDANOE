@@ -75,12 +75,17 @@ if (isset($_POST['booking'])) {
     $jamtotal = sprintf("%02d:00 - %02d:00", $jam, $jam2);
 
     // Harga lapangan
+    // Harga lapangan
     if ($lapangan == "Lapangan A") {
         $harga = 50000;
     } elseif ($lapangan == "Lapangan B") {
         $harga = 70000;
-    } else {
+    } elseif ($lapangan == "Lapangan C") {
         $harga = 90000;
+    } elseif ($lapangan == "Lapangan D") {
+        $harga = 90000;
+    } else {
+        $harga = 50000;
     }
 
     // Total pembayaran
@@ -144,12 +149,22 @@ if (isset($_POST['booking'])) {
                 <option>Lapangan A</option>
                 <option>Lapangan B</option>
                 <option>Lapangan C</option>
+                <option>Lapangan D</option>
             </select>
 
             <input type="date"
                    name="tanggal"
                    class="input"
                    required>
+
+            <div style="font-size:13px;color:#344054;margin:6px 0 0;">Keterangan: <strong>Lapangan A, B</strong> = Karpet; <strong>Lapangan C, D</strong> = Kayu</div>
+
+            <div style="display:flex;gap:12px;align-items:center;margin-top:8px;">
+                <div style="font-size:13px;color:#344054;">Harga / Jam: <strong id="price-per-hour">Rp 50.000</strong></div>
+                <div style="font-size:13px;color:#344054;">Estimasi Total: <strong id="est-total">Rp 50.000</strong></div>
+            </div>
+            <input type="hidden" name="harga" id="hidden-harga" value="50000">
+            <input type="hidden" name="total_bayar" id="hidden-total" value="50000">
 
             <select name="jam" class="input">
                 <option value="8">08:00</option>
@@ -186,3 +201,28 @@ if (isset($_POST['booking'])) {
 
 </body>
 </html>
+<script>
+// autofill harga and estimated total on user booking form
+(() => {
+    const priceMap = { 'Lapangan A':50000, 'Lapangan B':70000, 'Lapangan C':90000, 'Lapangan D':90000 };
+    const lap = document.querySelector('select[name="lapangan"]');
+    const durasi = document.querySelector('input[name="durasi"]');
+    const priceEl = document.getElementById('price-per-hour');
+    const totalEl = document.getElementById('est-total');
+    const hiddenHarga = document.getElementById('hidden-harga');
+    const hiddenTotal = document.getElementById('hidden-total');
+
+    function formatRp(n){ return 'Rp '+n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+    function update(){
+        const p = priceMap[lap.value] || 50000;
+        const d = Math.max(1, parseInt(durasi.value) || 1);
+        priceEl.textContent = formatRp(p);
+        totalEl.textContent = formatRp(p * d);
+        hiddenHarga.value = p;
+        hiddenTotal.value = p * d;
+    }
+    lap.addEventListener('change', update);
+    durasi.addEventListener('input', update);
+    update();
+})();
+</script>
