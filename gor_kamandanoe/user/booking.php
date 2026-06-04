@@ -154,6 +154,7 @@ if (isset($_POST['booking'])) {
 
             <input type="date" name="tanggal" class="input" required>
 
+<<<<<<< HEAD
             <!-- <div style="font-size:13px;color:#344054;margin:6px 0 0;">Keterangan: <strong>Lapangan A, B</strong> =
                 Karpet; <strong>Lapangan C, D</strong> = Kayu</div>
 
@@ -167,6 +168,9 @@ if (isset($_POST['booking'])) {
 
             <input type="hidden" name="harga" id="hidden-harga" value="50000">
             <input type="hidden" name="total_bayar" id="hidden-total" value="50000">
+=======
+           
+>>>>>>> ebb7b7942722144f472492248a0405b78917cc0b
 
             <select name="jam" class="input">
                 <option value="8">08:00</option>
