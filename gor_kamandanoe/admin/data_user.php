@@ -3,6 +3,8 @@ session_start();
 if(!isset($_SESSION['role'])||$_SESSION['role']!="admin"){header("location:../login.php");exit;}
 include "../koneksi.php";
 
+/** @var mysqli $conn */
+
 $msg = '';
 if(isset($_POST['aksi_tambah'])){
     $username=mysqli_real_escape_string($conn,$_POST['username']);
@@ -43,7 +45,10 @@ $total_users = mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM user"))
   <div class="topbar-right">
     <form method="GET">
       <div class="topbar-search">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8a8680" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#8a8680" stroke-width="2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
         <input type="text" name="q" placeholder="Cari pengguna..." value="<?= htmlspecialchars($search) ?>">
       </div>
     </form>
@@ -51,6 +56,9 @@ $total_users = mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM user"))
   </div>
 </div>
 <div class="page-body">
+
+
+
   <?= $msg ?>
   <div class="card-box">
     <div class="card-box-header">
@@ -71,7 +79,8 @@ $total_users = mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM user"))
         </td>
         <td><span class="badge <?= $d['role']=='admin'?'badge-orange':'badge-blue' ?>"><?= ucfirst($d['role']) ?></span></td>
         <td>
-          <button class="btn-action btn-secondary btn-sm" onclick="openEdit(<?= $d['id'] ?>,'<?= htmlspecialchars($d['username'],ENT_QUOTES) ?>','<?= $d['role'] ?>')">Edit</button>
+          <button class="btn-action btn-secondary btn-sm" onclick="openEdit(<?= $d['id'] ?>,'<?= 
+          htmlspecialchars($d['username'],ENT_QUOTES) ?>','<?= $d['role'] ?>')">Edit</button>
           <a href="?hapus=<?= $d['id'] ?>" class="btn-action btn-danger btn-sm" onclick="return confirm('Yakin hapus user ini?')">Hapus</a>
         </td>
       </tr>
