@@ -157,14 +157,7 @@ if (isset($_POST['booking'])) {
                    class="input"
                    required>
 
-            <div style="font-size:13px;color:#344054;margin:6px 0 0;">Keterangan: <strong>Lapangan A, B</strong> = Karpet; <strong>Lapangan C, D</strong> = Kayu</div>
-
-            <div style="display:flex;gap:12px;align-items:center;margin-top:8px;">
-                <div style="font-size:13px;color:#344054;">Harga / Jam: <strong id="price-per-hour">Rp 50.000</strong></div>
-                <div style="font-size:13px;color:#344054;">Estimasi Total: <strong id="est-total">Rp 50.000</strong></div>
-            </div>
-            <input type="hidden" name="harga" id="hidden-harga" value="50000">
-            <input type="hidden" name="total_bayar" id="hidden-total" value="50000">
+           
 
             <select name="jam" class="input">
                 <option value="8">08:00</option>
