@@ -1,6 +1,6 @@
 <?php
 
-include "koneksi.php";
+include "../koneksi.php";
 
 if (isset($_POST['register'])) {
 
@@ -26,7 +26,7 @@ if (isset($_POST['register'])) {
                 echo "
                     <script>
                         alert('Username sudah digunakan');
-                        window.location='register.php';
+                        window.location='../view/register.php';
                     </script>
                     ";
             }
@@ -37,7 +37,7 @@ if (isset($_POST['register'])) {
         echo "
             <script>
                 alert('password minimal 8 karakter');
-                window.location='register.php';
+                window.location='../view/register_view.php';
             </script>
             ";
     }
@@ -57,55 +57,9 @@ if (isset($_POST['register'])) {
     echo "
     <script>
         alert('Registrasi berhasil');
-        window.location='login.php';
+        window.location='../view/login_view.php';
     </script>
     ";
 }
 
 ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-
-    <title>Register</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body>
-
-    <div class="form-container">
-
-        <h2>DAFTAR</h2>
-
-        <form method="POST">
-
-
-
-            <input type="text" name="username" class="input" placeholder="Username" required>
-
-            <input type="text" name="noHp" class="input" placeholder="Ex: 082299998888" required>
-
-            <input type="text" name="email" class="input" placeholder="user@gmail.com" required>
-
-            <input type="password" name="password" class="input" placeholder="Password" required>
-
-            <button type="submit" name="register" class="button">
-                DAFTAR
-            </button>
-
-        </form>
-
-        <div class="link">
-            Sudah punya akun?
-            <a href="login.php">Login</a>
-        </div>
-
-    </div>
-
-</body>
-
-</html>

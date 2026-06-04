@@ -1,4 +1,6 @@
-
+<?php
+include "../controller/booking.php";
+?>
 <!DOCTYPE html>
 <html>
 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +6,7 @@
 
     <title>GOR Kamandanoe</title>
 
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="view/home.css">
 
 </head>
 
@@ -21,11 +22,11 @@
 
             <div class="navbar2">
 
-                <a href="user/booking.php"><strong>Booking</strong></a>
+                <a href="view/booking_view.php"><strong>Booking</strong></a>
 
-                <a href="user/jadwal.php"><strong>Cek Jadwal</strong></a>
+                <a href="controller/jadwal.php"><strong>Cek Jadwal</strong></a>
 
-                <a href="user/transaksi.php"><strong>Pembayaran</strong></a>
+                <a href="view/transaksi_view.php"><strong>Pembayaran</strong></a>
 
                 <a href="index.php"><strong>Logout</strong></a>
 
@@ -66,7 +67,7 @@
                     <h3>Booking Lapangan</h3>
                 </div>
                 <div class="isi1">
-                    <a href="user/booking.php"></a>
+                    <a href="view/booking_view.php"></a>
                 </div>
             </div>
 
@@ -75,7 +76,7 @@
                     <h3>Cek Jadwal</h3>
                 </div>
                 <div class="isi2">
-                    <a href="user/jadwal.php"></a>
+                    <a href="controller/jadwal.php"></a>
                 </div>
             </div>
 
@@ -84,7 +85,7 @@
                     <h3>Transaksi</h3>
                 </div>
                 <div class="isi3">
-                    <a href="user/transaksi.php"></a>
+                    <a href="view/transaksi_view.php"></a>
                 </div>
             </div>
 

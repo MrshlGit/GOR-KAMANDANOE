@@ -16,7 +16,7 @@ $total_booking = mysqli_num_rows($data);
 
     <title>Jadwal Bermain</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../view/jadwal.css">
 
 </head>
 

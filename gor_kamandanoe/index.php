@@ -5,7 +5,7 @@
 
     <title>GOR Kamandanoe</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="view/style.css">
 
 </head>
 
@@ -19,8 +19,8 @@
         </div>
 
         <div class="menu">
-            <a href="login.php">Login</a>
-            <a href="register.php">Daftar</a>
+            <a href="view/login_view.php">Login</a>
+            <a href="view/register_view.php">Daftar</a>
         </div>
 
     </div>

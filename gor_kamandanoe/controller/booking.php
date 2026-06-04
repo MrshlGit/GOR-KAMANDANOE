@@ -121,7 +121,7 @@ if (isset($_POST['booking'])) {
     echo "
     <script>
         alert('Booking berhasil');
-        window.location='transaksi.php';
+        window.location='../view/transaksi_view.php';
     </script>
     ";
 }
