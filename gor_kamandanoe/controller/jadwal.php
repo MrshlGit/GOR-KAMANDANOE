@@ -16,7 +16,7 @@ $total_booking = mysqli_num_rows($data);
 
     <title>Jadwal Bermain</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../view/jadwal.css">
 
 </head>
 
@@ -99,7 +99,7 @@ $total_booking = mysqli_num_rows($data);
 
         <div class="btn-area">
 
-            <a href="../home.php" class="btn-kembali">
+            <a href="../view/home.php" class="btn-kembali">
                 Kembali ke Dashboard
             </a>
 

@@ -5,7 +5,7 @@
 
     <title>GOR Kamandanoe</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="view/style.css">
 
 </head>
 
@@ -13,14 +13,13 @@
 
     <div class="navbar">
 
-        <div class="logo">
-
+        <span class="logo">
             GOR Kamandanoe
-        </div>
+        </span>
 
         <div class="menu">
-            <a href="login.php">Login</a>
-            <a href="register.php">Daftar</a>
+            <a href="view/login_view.php">Login</a>
+            <a href="view/register_view.php">Daftar</a>
         </div>
 
     </div>
@@ -33,7 +32,7 @@
             Sistem Informasi GOR Kamandanoe
         </p>
 
-        <a href="login.php" class="btn">
+        <a href="view/login_view.php" class="btn">
             Mulai Booking
         </a>
 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +6,7 @@
 
     <title>GOR Kamandanoe</title>
 
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="home.css">
 
 </head>
 
@@ -13,7 +14,7 @@
     <div class="besar">
         <div class="atas">
             <div class="navbar">
-                <img src="img/canvas.png" class="logo">
+                <img src="../img/canvas.png" class="logo">
 
                 <h1>GOR KAMANDANOE</h1>
 
@@ -21,21 +22,22 @@
 
             <div class="navbar2">
 
-                <a href="user/booking.php"><strong>Booking</strong></a>
+                <a href="booking_view.php"><strong>Booking</strong></a>
 
-                <a href="user/jadwal.php"><strong>Cek Jadwal</strong></a>
+                <a href="../controller/jadwal.php"><strong>Cek Jadwal</strong></a>
 
-                <a href="user/transaksi.php"><strong>Pembayaran</strong></a>
+                <a href="transaksi_view.php"><strong>Pembayaran</strong></a>
 
-                <a href="index.php"><strong>Logout</strong></a>
+                <a href="../logout.php"><strong>Logout</strong></a>
 
             </div>
         </div>
 
         <div class="hero">
 
-            <a href="user/booking.php" class="btn">
-                Mulai Booking
+            <a href="https://www.google.com/maps/place/GOR+Kamandanoe/@-7.7533754,110.4410462,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7a5a32fdfadf89:0x92648a5d8a236746!8m2!3d-7.7533754!4d110.4410462!16s%2Fg%2F11c48nw0j8"
+               target="_blank" class="btn">
+                📍 Lihat Lokasi GOR
             </a>
 
         </div>
@@ -65,7 +67,7 @@
                     <h3>Booking Lapangan</h3>
                 </div>
                 <div class="isi1">
-                    <a href="user/booking.php"></a>
+                    <a href="booking_view.php"></a>
                 </div>
             </div>
 
@@ -74,7 +76,7 @@
                     <h3>Cek Jadwal</h3>
                 </div>
                 <div class="isi2">
-                    <a href="user/jadwal.php"></a>
+                    <a href="../controller/jadwal.php"></a>
                 </div>
             </div>
 
@@ -83,7 +85,7 @@
                     <h3>Transaksi</h3>
                 </div>
                 <div class="isi3">
-                    <a href="user/transaksi.php"></a>
+                    <a href="transaksi_view.php"></a>
                 </div>
             </div>
 

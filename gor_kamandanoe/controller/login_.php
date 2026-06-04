@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "koneksi.php";
+include "../koneksi.php";
 
 if (isset($_POST['login'])) {
 
@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
         $_SESSION['role'] = $d['role'];
 
         if ($d['role'] == "admin") {
-            header("location:admin/dashboard.php");
+            header("location:../admin/dashboard.php");
         } else {
             header("location:home.php");
         }
@@ -37,38 +37,3 @@ if (isset($_POST['login'])) {
 }
 
 ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-
-    <title>Login</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body>
-
-    <div class="form-container">
-
-        <h2>LOGIN</h2>
-
-        <form method="POST">
-
-            <input type="text" name="username" class="input" placeholder="Username" required>
-
-            <input type="password" name="password" class="input" placeholder="Password" required>
-
-            <button type="submit" name="login" class="button">
-                LOGIN
-            </button>
-
-        </form>
-
-    </div>
-
-</body>
-
-</html>
