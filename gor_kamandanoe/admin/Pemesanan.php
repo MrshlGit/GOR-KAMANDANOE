@@ -142,7 +142,7 @@ $data=mysqli_query($conn,"SELECT * FROM booking $where ORDER BY id_booking DESC"
   </div>
 </div>
 
-<!-- Modal Tambah -->
+<!-- Tambah -->
 <div class="modal-overlay" id="modal-tambah">
   <div class="modal-box modal-large">
     <h3>+ Tambah Booking</h3>
@@ -183,10 +183,10 @@ $data=mysqli_query($conn,"SELECT * FROM booking $where ORDER BY id_booking DESC"
   </div>
 </div>
 
-<!-- Modal Edit -->
+<!-- Edit -->
 <div class="modal-overlay" id="modal-edit">
   <div class="modal-box" style="width:520px;">
-    <h3>✏ Edit Booking</h3>
+    <h3>Edit Booking</h3>
     <form method="POST">
       <input type="hidden" name="id" id="eb-id">
       <div class="two-col">

@@ -56,7 +56,7 @@ $unread_msg=mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM feedback W
           <?php if($d['status']=='unread'): ?>
             <a href="?mark_read=<?=$d['id']?>" class="btn-action btn-secondary btn-sm">✓ Tandai Dibaca</a>
           <?php endif; ?>
-          <a href="?hapus=<?=$d['id']?>" class="btn-action btn-danger btn-sm" onclick="return confirm('Hapus pesan ini?')">🗑 Hapus</a>
+          <a href="?hapus=<?=$d['id']?>" class="btn-action btn-danger btn-sm" onclick="return confirm('Hapus pesan ini?')">Hapus</a>
         </td>
       </tr>
       <?php endwhile; ?>

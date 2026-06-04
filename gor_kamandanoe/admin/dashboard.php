@@ -45,7 +45,7 @@ function formatRp($n){ return 'Rp '.number_format($n,0,',','.'); }
     <div class="stat-card">
       <div class="stat-value-sm"><?= formatRp($total_pendapatan) ?></div>
       <div class="stat-label">Total Pendapatan</div>
-      <div class="stat-change up">↑ Dari booking lunas</div>
+      <div class="stat-change up">Dari booking lunas</div>
     </div>
   </div>
 

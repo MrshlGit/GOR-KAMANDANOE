@@ -71,8 +71,8 @@ $total_users = mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM user"))
         </td>
         <td><span class="badge <?= $d['role']=='admin'?'badge-orange':'badge-blue' ?>"><?= ucfirst($d['role']) ?></span></td>
         <td>
-          <button class="btn-action btn-secondary btn-sm" onclick="openEdit(<?= $d['id'] ?>,'<?= htmlspecialchars($d['username'],ENT_QUOTES) ?>','<?= $d['role'] ?>')">✏ Edit</button>
-          <a href="?hapus=<?= $d['id'] ?>" class="btn-action btn-danger btn-sm" onclick="return confirm('Yakin hapus user ini?')">🗑 Hapus</a>
+          <button class="btn-action btn-secondary btn-sm" onclick="openEdit(<?= $d['id'] ?>,'<?= htmlspecialchars($d['username'],ENT_QUOTES) ?>','<?= $d['role'] ?>')">Edit</button>
+          <a href="?hapus=<?= $d['id'] ?>" class="btn-action btn-danger btn-sm" onclick="return confirm('Yakin hapus user ini?')">Hapus</a>
         </td>
       </tr>
       <?php endwhile; ?>
@@ -104,7 +104,7 @@ $total_users = mysqli_fetch_row(mysqli_query($conn,"SELECT COUNT(*) FROM user"))
 <!-- Modal Edit -->
 <div class="modal-overlay" id="modal-edit">
   <div class="modal-box">
-    <h3>✏ Edit User</h3>
+    <h3>Edit User</h3>
     <form method="POST">
       <input type="hidden" name="id" id="edit-id">
       <div class="form-group"><label>Username</label><input type="text" name="username" id="edit-username" class="form-control" required></div>

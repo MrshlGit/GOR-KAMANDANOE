@@ -91,43 +91,18 @@ function formatRp($n){return 'Rp '.number_format($n,0,',','.');}
           <div><span class="text-dark" style="font-weight:600;">Harga/Jam:</span> <?= formatRp($lap['harga']) ?></div>
           <div><span class="text-dark" style="font-weight:600;">Kapasitas:</span> <?= $lap['kapasitas'] ?> orang</div>
         </div>
-        <button class="btn-action btn-secondary btn-sm" style="margin-top:14px;width:100%;justify-content:center;" onclick="openEditLap('<?= $lap['nama'] ?>',<?= $lap['harga'] ?>)">&#9998; Edit Lapangan</button>
+        <button class="btn-action btn-secondary btn-sm" style="margin-top:14px;width:100%;justify-content:center;" onclick="openEditLap('<?= $lap['nama'] ?>',<?= $lap['harga'] ?>)">Edit Lapangan</button>
       </div>
       <?php endforeach; ?>
     </div>
   </div>
 
-  <!-- Saran & Kritik -->
-  <div class="card-box">
-    <div class="card-box-header"><span class="card-box-title">Saran & Kritik Pengguna</span></div>
-    <div style="padding:16px;">
-      <div class="alert alert-info">Fitur saran & kritik akan tersedia ketika pengguna mengirimkan feedback melalui aplikasi.</div>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div class="info-card">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-            <div class="avatar-badge avatar-badge-blue">I</div>
-            <strong>Isnan</strong>
-            <span class="badge badge-yellow">Saran</span>
-          </div>
-          <p>Tambah jam malam pak, sering penuh.</p>
-        </div>
-        <div class="info-card">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-            <div class="avatar-badge avatar-badge-green">M</div>
-            <strong>Messi</strong>
-            <span class="badge badge-blue">Pujian</span>
-          </div>
-          <p>Lapangannya bersih dan terawat!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- Modal Edit Lapangan -->
 <div class="modal-overlay" id="modal-edit-lap">
   <div class="modal-box">
-    <h3>&#9998; Edit Lapangan</h3>
+    <h3>Edit Lapangan</h3>
     <form method="POST">
       <div class="form-group"><label>Nama Lapangan</label><input type="text" name="nama_lap" id="el-nama" class="form-control" readonly></div>
       <div class="form-group"><label>Tipe</label><input type="text" name="tipe" value="Badminton Indoor" class="form-control"></div>

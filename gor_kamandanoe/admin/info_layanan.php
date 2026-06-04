@@ -89,7 +89,7 @@ function formatRp($n){return 'Rp '.number_format($n,0,',','.');}
           <div><span class="text-dark" style="font-weight:600;">Harga/Jam:</span> <?= formatRp($lap['harga']) ?></div>
           <div><span class="text-dark" style="font-weight:600;">Kapasitas:</span> <?= $lap['kapasitas'] ?> orang</div>
         </div>
-        <button class="btn-action btn-secondary btn-sm" style="margin-top:14px;width:100%;justify-content:center;" onclick="openEditLap('<?= $lap['nama'] ?>',<?= $lap['harga'] ?>)">✏ Edit Lapangan</button>
+        <button class="btn-action btn-secondary btn-sm" style="margin-top:14px;width:100%;justify-content:center;" onclick="openEditLap('<?= $lap['nama'] ?>',<?= $lap['harga'] ?>)">Edit Lapangan</button>
       </div>
       <?php endforeach; ?>
     </div>
@@ -99,7 +99,7 @@ function formatRp($n){return 'Rp '.number_format($n,0,',','.');}
 <!-- Modal Edit Lapangan -->
 <div class="modal-overlay" id="modal-edit-lap">
   <div class="modal-box">
-    <h3>✏ Edit Lapangan</h3>
+    <h3>Edit Lapangan</h3>
     <form method="POST">
       <div class="form-group"><label>Nama Lapangan</label><input type="text" name="nama_lap" id="el-nama" class="form-control" readonly></div>
       <div class="form-group"><label>Tipe</label><input type="text" name="tipe" value="Badminton Indoor" class="form-control"></div>
