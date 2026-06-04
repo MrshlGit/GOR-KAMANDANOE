@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 15px;
-    background-color: green;
+    background-color: #ff6b00;
 }
 
 h1 {
@@ -50,19 +50,44 @@ h1 {
     display: flex;
     flex-direction: row;
     width: 700px;
+    background-color: #ff6b00;
 }
 
 .lapangan {
-    background-color: red;
+    background-color: white;
     width: 400px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.lapangan img {
+    border-radius: 15px;
+    width: 100%;
+    /* Mengubah ke persentase agar lebih fleksibel di dalam box 400px */
+    max-width: 290px;
+    /* Batas maksimal lebar gambar seperti keinginan awal Anda */
+    height: 220px;
+    /* Menentukan tinggi gambar agar rapi di dalam box setinggi 250px */
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lapangan img:hover {
+    transform: scale(1.06);
+}
+
+.label {
+    display: inline-block;
+    width: 90px;
 }
 
 .data {
     width: 300px;
     height: 250px;
-    background: rgba(255, 255, 255, 0.95);
+    background-color: white;
     padding: 25px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: 0.3s;

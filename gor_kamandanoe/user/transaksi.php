@@ -51,7 +51,7 @@ WHERE nama_user='$nama'"
     <div class="container">
 
         <h1 style="margin-top:30px;">
-            Tagihan Pembayaran
+            TAGIHAN PEMBAYARAN
         </h1>
 
         <?php
@@ -66,13 +66,11 @@ WHERE nama_user='$nama'"
                         </h3>
 
                         <p>
-                            Tanggal :
-                            <?php echo $d['tanggal']; ?>
+                            <span class="label">Tanggal</span>: <?php echo $d['tanggal']; ?>
                         </p>
 
                         <p>
-                            Jam :
-                            <?php echo $d['jam']; ?>
+                            <span class="label">Jam</span>: <?php echo $d['jam']; ?>
                         </p>
 
 
@@ -104,6 +102,16 @@ WHERE nama_user='$nama'"
 
                     <div class="lapangan">
 
+                        <?php
+                        if ($d['lapangan'] == "Lapangan A") { ?>
+                            <img src="../img/karpet2.jpg">
+
+                        <?php } ?>
+
+                        <?php
+                        if ($d['lapangan'] == "Lapangan B") { ?>
+                            <img src="../img/kayu2.jpg">
+                        <?php } ?>
 
                     </div>
 
@@ -111,22 +119,15 @@ WHERE nama_user='$nama'"
 
                 <div class="box2">
                     <p>
-                        Total Bayar :
-                        <b>
-                            Rp <?php echo number_format($d['total_bayar']); ?>
-                        </b>
+                      <span class="label">Total Bayar</span>: <b>Rp <?php echo number_format($d['total_bayar']); ?></b>
                     </p>
 
                     <p>
-                        Status :
-                        <b>
-                            <?php echo $d['status']; ?>
-                        </b>
+                       <span class="label">Status</span>: <b><?php echo $d['status']; ?></b>
                     </p>
 
                     <p>
-                        Metode :
-                        <?php echo $d['metode_pembayaran']; ?>
+                        <span class="label">Metode</span>: <?php echo $d['metode_pembayaran']; ?>
                     </p>
 
                 </div>
