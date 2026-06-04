@@ -99,7 +99,7 @@ $total_booking = mysqli_num_rows($data);
 
         <div class="btn-area">
 
-            <a href="dashboard.php" class="btn-kembali">
+            <a href="../home.php" class="btn-kembali">
                 Kembali ke Dashboard
             </a>
 
