@@ -134,7 +134,7 @@ if (isset($_POST['booking'])) {
 
 <head>
     <title>Booking Lapangan</title>
-    <link rel='stylesheet' href='../css/boking.css'>
+    <link rel='stylesheet' href='../view/boking.css'>
 </head>
 
 <body>
