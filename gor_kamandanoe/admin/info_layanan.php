@@ -2,6 +2,8 @@
 session_start();
 if(!isset($_SESSION['role'])||$_SESSION['role']!="admin"){header("location:../login.php");exit;}
 include "../koneksi.php";
+/** @var mysqli $conn */
+
 $msg='';
 if(isset($_POST['aksi_edit_lap'])){
     $msg='<div class="alert alert-success">Perubahan lapangan berhasil disimpan.</div>';
